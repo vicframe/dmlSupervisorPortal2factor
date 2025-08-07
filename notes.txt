@@ -1,0 +1,44 @@
+npm run start:dev
+C:\Users\marti\Desktop\joeyHighLevel\2julydml\backend>npm run start:dev
+
+npx create-react-app frontend
+
+FRONTEND 
+
+C:\Users\marti\Desktop\joeyHighLevel\2julydml>cd frontend
+
+C:\Users\marti\Desktop\joeyHighLevel\2julydml\frontend>npm start
+
+> frontend@0.1.0 start
+> react-scripts start
+
+front end 
+
+window 2 npm run build then npm start
+
+C:\Users\marti\Desktop\joeyHighLevel\2julydml\frontend>npm run build
+
+> frontend@0.1.0 build
+> react-scripts build
+
+backend
+
+C:\Users\marti\Desktop\joeyHighLevel\2julydml\backend>node server.js
+undefined
+Port running: 3001
+
+
+
+C:\Users\marti\Desktop\joeyHighLevel\2julydml\backend>npm run start:dev
+
+> start:dev
+> nodemon server.js
+
+
++19494238999
+
+dml ghl test subaccount api
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6IkFYRERYUkU1Qkl6eUVCMG9ITVIyIiwidmVyc2lvbiI6MSwiaWF0IjoxNzUyNzk4MzUyMDI1LCJzdWIiOiJSYlZnVHVoTXJlc1JHS1RDN1duaiJ9.r3yBF2HQiCl4pTs-YDCdQrny-6U-KUVs3D34GT1qZiI 
+
+ngrok http 3001 at parent

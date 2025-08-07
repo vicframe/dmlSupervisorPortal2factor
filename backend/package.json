@@ -1,0 +1,43 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only backend",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only backend",
+    "logs": "firebase functions:log",
+    "start:dev": "nodemon server.js"
+  },
+  "nodemonConfig": {
+    "env": {
+      "MOBILE": "+18127320343"
+    }
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "@twilio/voice-sdk": "^2.2.0",
+    "axios": "^1.9.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "firebase": "^11.9.1",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.0.1",
+    "googleapis": "^150.0.1",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.10",
+    "openai": "^5.11.0",
+    "socket.io": "^4.8.1",
+    "twilio": "^3.64.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
