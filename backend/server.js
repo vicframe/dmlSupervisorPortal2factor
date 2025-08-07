@@ -262,10 +262,10 @@ console.log(process.env.MOBILE)
 
 
 //app.listen(PORT,()=>{
-server.listen(PORT,()=>{
+/*server.listen(PORT,()=>{
 
     console.log(`Port running: ${PORT}`)
   
-})
+})*/
 
 exports.api = functions.https.onRequest(app);
