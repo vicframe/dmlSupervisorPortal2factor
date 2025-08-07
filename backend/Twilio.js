@@ -6,7 +6,7 @@ const VoiceResponse = require('twilio/lib/twiml/VoiceResponse')
             
 
 class Twilio{
-    phoneNumber = '+18127320343'
+    /*phoneNumber = '+18127320343'
     phonenNumberSid = 'PN8ea1699149f0acd7a1cc63ea4eecf92d'
     tokenSid = 'SK4411a33df3fe8ce0516b644d080f91a7'
     tokenSecret = '4yK4LfHvoV24N4onYbOauJykXy4TPITT'
@@ -14,10 +14,28 @@ class Twilio{
     verify = 'VA296574a1cec0b611282d9e7f30b6894d'
     outgoingApplicationSid = 'APae8310637ab70bff9a1e4c7c2bf12018'
 
-    authToken = 'ac57125790f08b78ab7546146dc755e1'
+    authToken = 'ac57125790f08b78ab7546146dc755e1'*/
+    phoneNumber = process.env.TWILIO_PHONE_NUMBER
+    phonenNumberSid = process.env.TWILIO_PHONE_SID
+    tokenSid = process.env.TWILIO_TOKEN_SID
+    tokenSecret = process.env.TWILIO_TOKEN_SECRET
+    accountSid = process.env.TWILIO_ACCOUNT_SID
+    verify = process.env.TWILIO_VERIFY_SID
+    outgoingApplicationSid = process.env.TWILIO_APP_SID
+    authToken = process.env.TWILIO_AUTH_TOKEN
     client;
 
+    
     constructor(){
+                console.log('✅ Twilio env variables:');
+        console.log('TWILIO_PHONE_NUMBER:', this.phoneNumber);
+        console.log('TWILIO_PHONE_SID:', this.phonenNumberSid);
+        console.log('TWILIO_TOKEN_SID:', this.tokenSid);
+        console.log('TWILIO_TOKEN_SECRET:', this.tokenSecret ? '[HIDDEN]' : '❌ MISSING');
+        console.log('TWILIO_ACCOUNT_SID:', this.accountSid);
+        console.log('TWILIO_VERIFY_SID:', this.verify);
+        console.log('TWILIO_APP_SID:', this.outgoingApplicationSid);
+        console.log('TWILIO_AUTH_TOKEN:', this.authToken ? '[HIDDEN]' : '❌ MISSING');
         this.client=twilio(this.tokenSid, this.tokenSecret, {
             accountSid:this.accountSid,
         });

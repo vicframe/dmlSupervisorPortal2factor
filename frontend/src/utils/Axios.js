@@ -3,7 +3,7 @@ import axios from 'axios';
 const baseURL =
   window.location.hostname === 'localhost'
     ? 'http://localhost:3001'
-    : 'https://api-obcqutdy7a-uc.a.run.app';
+    : 'https://dmlsupervisorportal2factor.onrender.com';
 
 export default axios.create({
   baseURL,

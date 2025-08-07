@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const twilio = require('./Twilio')
 const bodyParser= require('body-parser')
@@ -8,6 +9,7 @@ const jwt=require('./utils/Jwt')
 const functions = require('firebase-functions')
 const { Twilio } = require('twilio');
 const { getAccessTokenForVoice } = require('./Twilio')
+
 
 const { VoiceResponse } = require('twilio').twiml;
 const { OpenAI } = require('openai');
@@ -53,7 +55,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 app.use(express.static('public'));
 
-PORT=3001
+//PORT=3001
+const PORT = process.env.PORT || 3001;
 
 
 app.get('/test', (req,res)=>{
@@ -197,12 +200,12 @@ app.post('/gather-id', async (req, res) => {
 
       const confirmationMessage = aiResponse.choices[0].message.content.trim();
       twiml.say({ voice: 'female' }, confirmationMessage);
-      twiml.redirect('https://api-obcqutdy7a-uc.a.run.app/enqueue');
+      twiml.redirect('https://dmlsupervisorportal2factor.onrender.com/enqueue');
 
     } catch (err) {
       console.error('OpenAI error:', err.message || err);
       twiml.say({ voice: 'female' }, 'Thanks. We’re transferring your call now.');
-      twiml.redirect('https://api-obcqutdy7a-uc.a.run.app/enqueue');
+      twiml.redirect('https://dmlsupervisorportal2factor.onrender.com/enqueue');
     }
 
   // ✅ Handle natural-language fallback
@@ -218,12 +221,12 @@ app.post('/gather-id', async (req, res) => {
     rawSpeech.includes("i don't know")
   ) {
     twiml.say({ voice: 'female' }, "No worries! We'll still connect you to someone who can help.");
-    twiml.redirect('https://api-obcqutdy7a-uc.a.run.app/enqueue');
+    twiml.redirect('https://dmlsupervisorportal2factor.onrender.com/enqueue');
 
   // ❌ Invalid input fallback
   } else {
     twiml.say({ voice: 'female' }, "Sorry, that wasn’t a valid ID. Please try again.");
-    twiml.redirect('https://api-obcqutdy7a-uc.a.run.app/call-new');
+    twiml.redirect('https://dmlsupervisorportal2factor.onrender.com/call-new');
   }
 
   res.type('text/xml');

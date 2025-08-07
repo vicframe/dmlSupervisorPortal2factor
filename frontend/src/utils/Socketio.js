@@ -6,16 +6,16 @@ class Socket{
    // url = 'http://localhost:3001'
     client = null;
     constructor(){
-        this.client = io.connect('https://api-obcqutdy7a-uc.a.run.app')
+        this.client = io.connect('https://dmlsupervisorportal2factor.onrender.com')
     }
 
     addToken(token){
-        this.client = io.connect('https://api-obcqutdy7a-uc.a.run.app', { query: { token } })
+        this.client = io.connect('https://dmlsupervisorportal2factor.onrender.com', { query: { token } })
         console.log('addtoken')
 
     }
     removeToken(){
-        this.client = io.connect('https://api-obcqutdy7a-uc.a.run.app')
+        this.client = io.connect('https://dmlsupervisorportal2factor.onrender.com')
     }
 
 }
