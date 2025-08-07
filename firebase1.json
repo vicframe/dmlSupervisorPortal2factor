@@ -1,4 +1,3 @@
-
 {
   "hosting": {
     "public": "frontend/build",
@@ -16,26 +15,5 @@
   },
   "functions": {
     "source": "backend"
-  },
-  "emulators": {
-    "functions": {
-      "port": 5001
-    },
-    "hosting": {
-      "port": 5000
-    },
-    "firestore": {
-      "port": 8080
-    },
-    "database": {
-      "port": 9000
-    },
-    "auth": {
-      "port": 9099
-    },
-    "pubsub": {
-      "disabled": true
-    }
   }
 }
-
