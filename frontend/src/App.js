@@ -64,10 +64,8 @@ function App() {
       setTwilioToken(data.token)
       console.log('twiliotoken')
     })
-
-    
     //socket.on('call-new', (data)=>{
-    /*  socket.client.on('call-new', ({ data:{ CallSid, CallStatus } })=>{
+      socket.client.on('call-new', ({ data:{ CallSid, CallStatus } })=>{
 
         setCalls(draft => {
           const index = draft.calls.findIndex(call => call.CallSid ===CallSid )
@@ -76,25 +74,7 @@ function App() {
           }        
 
         });
-    });*/
-
-    socket.client.on('call-new', (payload) => {
-  console.log('[socket] call-new RAW:', payload);
-  const data = payload?.data || {};
-  console.log('[socket] call-new DATA:', data);
-
-  setCalls(draft => {
-    const idx = draft.calls.findIndex(c => c.CallSid === data.CallSid);
-    if (idx === -1) {
-      draft.calls.unshift(data);            // add new call to top
-    } else {
-      draft.calls[idx] = { ...draft.calls[idx], ...data }; // merge updates
-    }
-  });
-});
-
-
-
+    });
     socket.client.on('enqueue', ({ data: { CallSid } }) => {
           console.log('Enqueue event for:', CallSid);
           setCalls((draft) => {

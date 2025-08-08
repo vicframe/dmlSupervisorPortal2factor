@@ -267,6 +267,7 @@ console.log(process.env.MOBILE)
     console.log(`Port running: ${PORT}`)
   
 })*/
+
 if (!process.env.FUNCTIONS_EMULATOR && !process.env.K_SERVICE) {
   // Not running inside Firebase Functions or Cloud Run → start a server
   const PORT = process.env.PORT || 10000;
