@@ -268,14 +268,4 @@ server.listen(PORT,()=>{
   
 })
 
-/*
-if (!process.env.FUNCTIONS_EMULATOR && !process.env.K_SERVICE) {
-  // Not running inside Firebase Functions or Cloud Run → start a server
-  const PORT = process.env.PORT || 10000;
-  server.listen(PORT, '0.0.0.0', () => {
-    console.log(`Port running: ${PORT}`);
-  });
-}*/
-
-
 exports.api = functions.https.onRequest(app);
