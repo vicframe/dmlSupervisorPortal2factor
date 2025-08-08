@@ -117,7 +117,7 @@ class Twilio{
             answerCall(sid){
                  console.log('answerCall with sid', sid);
                 this.client.calls(sid).update({
-                    url: 'https://api-obcqutdy7a-uc.a.run.app/connect-call',
+                    url: 'https://dmlsupervisorportal2factor.onrender.com/connect-call',
                     method: 'POST',
                     function (err, call){
                         console.log('answerCall', call);
@@ -128,7 +128,7 @@ class Twilio{
 
                 })
             }
-
+//updatre url
             getAccessTokenForVoice = (identity) => {
 
                 console.log(`Acess token ${identity}`)
