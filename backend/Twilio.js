@@ -79,7 +79,7 @@ class Twilio{
             //return 
                 const gather = twiml.gather(
                 {input: 'speech',
-                action: 'https://dmlsupervisorportal2factor.onrender.com/gather-id',
+                action: 'https://api-obcqutdy7a-uc.a.run.app/gather-id',
                 method: 'POST',
                 language: 'en-US',
                 speechTimeout: 'auto'
@@ -117,7 +117,7 @@ class Twilio{
             answerCall(sid){
                  console.log('answerCall with sid', sid);
                 this.client.calls(sid).update({
-                    url: 'https://dmlsupervisorportal2factor.onrender.com/connect-call',
+                    url: 'https://api-obcqutdy7a-uc.a.run.app/connect-call',
                     method: 'POST',
                     function (err, call){
                         console.log('answerCall', call);
