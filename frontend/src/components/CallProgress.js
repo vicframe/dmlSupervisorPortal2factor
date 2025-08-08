@@ -1,6 +1,6 @@
 import React from 'react'
 import{ Container,Step } from 'semantic-ui-react'
-//import CallCenter from './CallCenter'
+import CallCenter from './CallCenter'
 import socket from '../utils/Socketio'
 
 function CallProgress({ call }){                    //..call.data.From
