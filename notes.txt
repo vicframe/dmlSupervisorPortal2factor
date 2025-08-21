@@ -38,11 +38,10 @@ C:\Users\marti\Desktop\joeyHighLevel\2julydml\backend>npm run start:dev
 +19494238999
 
 dml ghl test subaccount api
-
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6IkFYRERYUkU1Qkl6eUVCMG9ITVIyIiwidmVyc2lvbiI6MSwiaWF0IjoxNzUyNzk4MzUyMDI1LCJzdWIiOiJSYlZnVHVoTXJlc1JHS1RDN1duaiJ9.r3yBF2HQiCl4pTs-YDCdQrny-6U-KUVs3D34GT1qZiI 
+  
 
 ngrok http 3001 at parent
 
 
 
-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
+ 
