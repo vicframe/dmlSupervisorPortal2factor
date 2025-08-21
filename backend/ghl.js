@@ -10,13 +10,13 @@ const cors = require('cors');
 
  const twilio = require("twilio");
 
- const accountSid = "AC4c3a89e56afcb829253b16848592cbea";
-const authToken = "ac57125790f08b78ab7546146dc755e1";
+ const accountSid = 
+const authToken =  
 
 const client = twilio(accountSid, authToken);
 
 
-const GHL_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6IkFYRERYUkU1Qkl6eUVCMG9ITVIyIiwidmVyc2lvbiI6MSwiaWF0IjoxNzUyNzk4MzUyMDI1LCJzdWIiOiJSYlZnVHVoTXJlc1JHS1RDN1duaiJ9.r3yBF2HQiCl4pTs-YDCdQrny-6U-KUVs3D34GT1qZiI"; // Replace with real token
+const GHL_TOKEN =  token
 const BASE_URL = "https://rest.gohighlevel.com/v1/contacts";
 
 app.use(cors({ origin: true }));
