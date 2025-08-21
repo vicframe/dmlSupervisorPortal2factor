@@ -13,7 +13,7 @@ const { getAccessTokenForVoice } = require('./Twilio')
 
 const { VoiceResponse } = require('twilio').twiml;
 const { OpenAI } = require('openai');
-const openai = new OpenAI({ apiKey: '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' });
+const openai = new OpenAI({ apiKey: 
 const { findContactByUniqueId } = require('./ghl'); // adjust path if needed
 
 
